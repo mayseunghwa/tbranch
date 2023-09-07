@@ -25,11 +25,10 @@ while IFS=, read -r branch_name; do
   fi
 
   # Create the Git branch
-  git checkout part1
-  git checkout -b part1-"$branch_name"
-  git push origin part1-"$branch_name"
-  git branch --set-upstream-to origin/part1-"$branch_name"
-  git checkout part1
+  git checkout part3
+  git checkout -b part3-"$branch_name"
+  git push origin part3-"$branch_name"
+  git branch --set-upstream-to origin/part3-"$branch_name"
   echo "Created branch: $branch_name"
 done < "$csv_file"
 
